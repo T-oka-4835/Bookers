@@ -3,7 +3,9 @@
 <% @books.each do |book| %>
 <h3><%= book.title %></h3>
 <h3><%= book.body %></h3>
-<%= link_to "show", book_path(book.id) %>
+<%= link_to "Show", book_path(book.id) %>
+<%= link_to "Edit", book_path(book.id) %>
+<%= link_to "Destroy", book_path(book.id) %>
 <% end %>
 
 <h1>New book</h1>
