@@ -1,11 +1,24 @@
 <h1>Books</h1>
 
 <% @books.each do |book| %>
-<h3><%= book.title %></h3>
-<h3><%= book.body %></h3>
-<%= link_to "Show", book_path(book.id) %>
-<%= link_to "Edit", book_path(book.id) %>
-<%= link_to "Destroy", book_path(book.id) %>
+<table>
+
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <td><%= link_to "Show", book_path(book.id) %></td>
+      <td><%= link_to "Edit", book_path(book.id) %></td>
+      <td><%= link_to "Destroy", book_path(book.id) %></td>
+    </tr>
+
+</table>
+
+
 <% end %>
 
 <h1>New book</h1>
