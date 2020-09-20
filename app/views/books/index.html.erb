@@ -28,11 +28,15 @@
 <%= form_with model:@book, local:true do |f| %>
 <%= render 'layouts/error', model: f.object %>
 
-<h4>title</h4>
-<%= f.text_field :title %>
+<div class="field">
+  <div class="lavel">title</div>
+  <%= f.text_field :title %>
+</div>
 
-<h4>body</h4>
-<%= f.text_area :body %>
+<div class="field">
+  <div class="label">body</div>
+  <%= f.text_area :body %>
+</div>
 
 <%= f.submit 'Create Book'%>
 

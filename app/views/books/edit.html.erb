@@ -1,15 +1,18 @@
-<h4>Editing Book</h4>
-<%= form_with model:@book, local: true do |f| %>
+<div class="edit">
+ <h1><strong>Editing Book</strong></h1>
+  <%= form_with model:@book, local: true do |f| %>
+   <%= render 'layouts/error', model: f.object %>
 
-<p>title</p>
-<%= f.text_field :title %>
+<div class="edit-body">
+<p>Title</p>
+  <%= f.text_field :title %>
 
-<p>body</p>
-<%= f.text_area :body %>
-<%= f.submit 'Update Book' %>
+<p>Body</p>
+  <%= f.text_area :body %><br>
+  <%= f.submit 'Update Book' %><br>
 
-<!--修正の必要有-->
-<%= link_to "Show", books_path %>
-<%= link_to "Back", books_path %>
-
-<% end %>
+  <%= link_to "Show", book_path %>
+  <%= link_to "Back", books_path %>
+    </div>
+  <% end %>
+</div>
