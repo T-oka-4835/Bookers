@@ -1,3 +1,26 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index {
+  font-size: 13px;
+  margin-left: 30px;
+}
+
+.index,table {
+  display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
